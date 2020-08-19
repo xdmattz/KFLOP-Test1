@@ -5,14 +5,53 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:KFLOP_Test1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="550" Width="625" Closed="Window_Closed">
-    <Grid>
+        Title="MainWindow" Height="650" Width="750" Closed="Window_Closed">
+    <Grid Height="604" VerticalAlignment="Top">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="597*"/>
             <ColumnDefinition Width="20*"/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="BtnGetBoard" Content="Get Board" HorizontalAlignment="Left" Margin="247,262,0,0" VerticalAlignment="Top" Width="75" Click="BtnGetBoard_Click"/>
-        <Button x:Name="BtnCProgram" Content="C Program" HorizontalAlignment="Left" Margin="247,311,0,0" VerticalAlignment="Top" Width="75" Click="BtnCProgram_Click"/>
+        <Button x:Name="BtnGetBoard" Content="Get Board" HorizontalAlignment="Left" Margin="34,10,0,0" VerticalAlignment="Top" Width="75" Click="BtnGetBoard_Click"/>
+        <Button x:Name="BtnCProgram" Content="C Program" HorizontalAlignment="Left" Margin="240,10,0,0" VerticalAlignment="Top" Width="75" Click="BtnCProgram_Click"/>
+        <Button x:Name="btnSaveJ" Content="Parameters" HorizontalAlignment="Left" Margin="331,10,0,0" VerticalAlignment="Top" Width="75" Click="btnSaveJ_Click"/>
+        <Button x:Name="btnOpenJ" Content="Load JSON" HorizontalAlignment="Left" Margin="421,10,0,0" VerticalAlignment="Top" Width="75" Click="btnOpenJ_Click"/>
+        <Button x:Name="btnConfig" Content="Config" HorizontalAlignment="Left" Margin="142,10,0,0" VerticalAlignment="Top" Width="75" Click="btnConfig_Click"/>
+        <Button x:Name="btnGCode" Content="Load GCode" HorizontalAlignment="Left" Margin="34,42,0,0" VerticalAlignment="Top" Width="75" Click="btnGCode_Click"/>
+        <Button x:Name="btnCycleStart" Content="Cycle Start" HorizontalAlignment="Left" Margin="119,540,0,0" VerticalAlignment="Top" Width="75" Click="btnCycleStart_Click" RenderTransformOrigin="0.54,4.273"/>
+        <Button x:Name="btnFeedHold" Content="Feed Hold" HorizontalAlignment="Left" Margin="231,540,0,0" VerticalAlignment="Top" Width="75" Click="btnFeedHold_Click"/>
+        <Button x:Name="btnHalt" Content="Halt" HorizontalAlignment="Left" Margin="364,540,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.5,0.5" Click="btnHalt_Click">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="4.764"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="-0.917"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <TextBox x:Name="tbGCodeFile" HorizontalAlignment="Left" Height="23" Margin="142,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="173"/>
+        <TextBlock x:Name="DROX" HorizontalAlignment="Left" Margin="603,56,0,0" TextWrapping="Wrap" Text="0.0000" VerticalAlignment="Top" FontSize="36" Width="107" RenderTransformOrigin="0.5,0.5"/>
+        <Label Content="X:" Margin="0,51,115,0" VerticalAlignment="Top" HorizontalAlignment="Right" FontSize="36" Width="45"/>
+        <TextBlock x:Name="DROY" HorizontalAlignment="Left" Margin="603,114,0,0" TextWrapping="Wrap" Text="0.0000" VerticalAlignment="Top" FontSize="36" Width="107"/>
+        <Label Content="Y:" Margin="0,109,115,0" VerticalAlignment="Top" HorizontalAlignment="Right" FontSize="36" Width="44"/>
+        <TextBlock x:Name="DROZ" HorizontalAlignment="Left" Margin="603,172,0,0" TextWrapping="Wrap" Text="0.0000" VerticalAlignment="Top" FontSize="36" Width="107"/>
+        <Label Content="Z:" Margin="0,167,115,0" VerticalAlignment="Top" HorizontalAlignment="Right" FontSize="36" Width="44"/>
+
+
+        <FlowDocumentScrollViewer x:Name="fdSV"  Margin="34,96,176,146">
+            <FlowDocument x:Name="fdConsole" FontSize="8" FontFamily="Arial">
+
+            </FlowDocument>
+
+        </FlowDocumentScrollViewer>
+        <Button x:Name="btnClear" Content="Clear" HorizontalAlignment="Left" Margin="558,326,0,0" VerticalAlignment="Top" Width="74" Click="btnClear_Click"/>
+        <Button x:Name="btnProgHalt" Content="Prog Halt" HorizontalAlignment="Left" Margin="558,16,0,0" VerticalAlignment="Top" Width="74" Click="btnProgHalt_Click"/>
+        <TextBox x:Name="tbStatus" HorizontalAlignment="Left" Height="23" Margin="576,379,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tbLineNo" HorizontalAlignment="Left" Height="23" Margin="576,407,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tbSeq" HorizontalAlignment="Left" Height="23" Margin="576,435,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tbErr" HorizontalAlignment="Left" Height="23" Margin="576,463,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <CheckBox x:Name="cbSimulate" Content="Simulate" HorizontalAlignment="Left" Margin="576,248,0,0" VerticalAlignment="Top"/>
+        <TextBlock x:Name="tbExTime" HorizontalAlignment="Left" Margin="576,506,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" RenderTransformOrigin="0.76,-0.844"/>
 
 
     </Grid>
